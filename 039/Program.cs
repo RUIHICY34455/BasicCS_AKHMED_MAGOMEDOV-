@@ -1,16 +1,41 @@
-﻿// В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+﻿// Найти сумму чисел одномерного массива стоящих на нечетной позиции
 
-int N=123;
+int N=9;
 
 int[] a=new int[N];
 Random random = new Random();
+int sum;
+
+sum = 0;
 for(int i=0; i<a.Length;i++)
-    a[i]=random.Next(100,1000);
+    a[i]=random.Next(0,10);
 
-int k;
+/*for(int i=0; i<a.Length;i++)
+    System.Console.Write($"{a[i]}  ");
+*/
+for(int i=1; i<a.Length;i+=2)
+    sum=sum+a[i];
 
-k = 0;
-for (int i = 10; i < 100; i++)
-        k++;
+System.Console.Write($"{sum} ");
 
-System.Console.Write($"{k} ");
+
+
+
+
+
+
+
+
+
+/*
+    System.Console.Write($"{a[i]}  ");
+    /*for(int j=1; j<a.Length;i++)
+    sum=sum+a[j];*/
+    /*if (i%2!=0)
+    {
+        sum=sum+a[i];
+    }*/
+
+
+  
+
